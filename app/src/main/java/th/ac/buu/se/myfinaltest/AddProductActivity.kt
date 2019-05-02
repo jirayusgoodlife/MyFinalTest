@@ -6,7 +6,11 @@ import android.support.design.widget.FloatingActionButton
 import android.widget.EditText
 import android.widget.Toast
 
+
 class AddProductActivity : AppCompatActivity() {
+
+    var COLLECTION_PRODUCT = "product"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,12 +32,16 @@ class AddProductActivity : AppCompatActivity() {
         // click action on save button
         fab_save.setOnClickListener {
             // Check can insert to db
-            var check_success = true
+            var check_success = true //edit here
 
             if (check_success) {
+
+
                 Toast.makeText(this, "Add Product Success", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
+
+
                 Toast.makeText(this, "Can't Add Product", Toast.LENGTH_SHORT).show()
             }
         }

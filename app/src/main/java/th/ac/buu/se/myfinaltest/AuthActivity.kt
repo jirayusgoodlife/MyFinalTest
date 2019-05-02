@@ -2,11 +2,14 @@ package th.ac.buu.se.myfinaltest
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
+
 class AuthActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +29,17 @@ class AuthActivity : AppCompatActivity() {
         var btn_signup = findViewById<Button>(R.id.btn_signup)
 
         btn_signin.setOnClickListener {
-            Toast.makeText(this,"Click Sign In",Toast.LENGTH_SHORT).show()
+
+            Toast.makeText(this, "Click Sign In", Toast.LENGTH_SHORT).show()
+            finish()
         }
 
         btn_signup.setOnClickListener {
-            Toast.makeText(this,"Click Sign Up",Toast.LENGTH_SHORT).show()
+
+            Toast.makeText(this, "Click Sign Up", Toast.LENGTH_SHORT).show()
+            finish()
         }
+
 
 
     }
@@ -43,9 +51,11 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+
     }
 
     override fun onStop() {
         super.onStop()
+
     }
 }
